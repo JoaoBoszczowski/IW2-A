@@ -43,3 +43,16 @@ while (cont >= 0) {
 for (let i = 0; i <= 10; i++) {
     console.log("valor de i: " + i)
 }
+
+
+
+
+
+  /* crie duas variaveis e armazene, com cada uma delas um valor numerico,
+ depois disso, faça uma soma,subtração, multiplicaçao e divisao dos valores,
+ por fim, apresente na tela os resultados. */
+
+ let n1 = 16
+ let n2 = 8
+
+ 
