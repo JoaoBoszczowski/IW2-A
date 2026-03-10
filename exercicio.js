@@ -80,3 +80,28 @@ for (let i = 0; i <= 100; i++) {
     soma = soma + i
 }
 console.log(soma)
+
+let contador = 5;
+
+while (contador >= 1) {
+    console.log(contador);
+    contador--;
+}
+
+
+function somar(num1, num2) {
+    return num1 + num2;
+}
+
+console.log(somar(5, 3));
+
+
+ function verificarParImpar(numero) {
+    if (numero % 2 === 0) {
+        return "Par";
+    } else {
+        return "Ímpar";
+    }
+}
+
+console.log(verificarParImpar(4));
