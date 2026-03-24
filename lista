@@ -1,0 +1,30 @@
+let botao = document.getElementById("btnClique")
+
+let texto = document.getElementById("texto")
+
+botao.addEventListener ("click", function () {
+    alert("O Botão foi precionado")
+    texto.textContent = "Texto Novo"
+})
+
+let inputnome = document.getElementById("inputNome")
+
+let botaonome = document.getElementById("btnMostrar")
+
+botaonome.addEventListener ("click", function () {
+    alert("o nome digitado foi: " + inputnome.value)
+})
+
+let lista = document.getElementById("lista")
+
+let botaolista = document.getElementById("btnAdicionar")
+
+botaolista.addEventListener("click", function() {
+    let novoelemento = document.createElement("li")
+    novoelemento.textContent = "Novo Elemento"
+    lista.appendChild(novoelemento)
+})
+
+let bloco = document.getElementById("caixa")
+
+let botaocor = document.getElementById("btnCor")
