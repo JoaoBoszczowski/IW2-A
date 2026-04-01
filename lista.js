@@ -25,6 +25,31 @@ botaolista.addEventListener("click", function() {
     lista.appendChild(novoelemento)
 })
 
-let bloco = document.getElementById("caixa")
+let botaocor = document.getElementById("btnCor");
+let caixa = document.getElementById("caixa"); 
 
-let botaocor = document.getElementById("btnCor")
+botaocor.addEventListener("click", function () {
+    caixa.style.backgroundColor = "navy";
+});
+
+let coratual = false;
+botao4.addEventListener("click", function () {
+    coratual = !coratual;
+    if (coratual) {
+        botao4.style.backgroundColor = "blue";
+    } else {
+        botao4.style.backgroundColor = "brown";
+    }
+});
+
+let cont = 0;
+botao1.addEventListener("click", function () {
+    cont ++;
+    console.log("Cliques: " + cont);
+});
+
+let botao5 = document.getElementById("btnRemover");
+botao5.addEventListener("dblclick", function () {
+    let ultimoFilho = lista.lastElementChild;
+    lista.removeChild(ultimoFilho);
+});
