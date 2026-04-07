@@ -1,0 +1,20 @@
+body {
+font-family: Arial, sans-serif;
+background-color: azure;
+color: #333;
+}
+h1 {
+    text-align: center;
+}
+div {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.botaotarefa {
+    background-color: rgb(105, 255, 247);
+    color: black;
+}
