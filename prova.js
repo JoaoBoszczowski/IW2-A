@@ -8,10 +8,12 @@ botao.addEventListener("click", function () {
     lista.appendChild(novoelemento)
 
     const btnRemover = document.createElement("button")
-    btnRemover.textContent = "concluir tarefa"
+    btnRemover.textContent = "CONCLUIR TAREFA"
     novoelemento.appendChild(btnRemover)
-
+    btnRemover.style.background = "green"
     btnRemover.addEventListener("click", function () {
         novoelemento.remove()
     })
 })
+
+
