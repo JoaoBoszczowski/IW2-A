@@ -2,6 +2,8 @@ let input = document.getElementById("inputtarefa")
 let botao = document.getElementById("botaotarefa")
 let lista = document.getElementById("lista")
 
+botao.style.background = "blue"
+botao.style.color = "white"
 botao.addEventListener("click", function () {
     let novoelemento = document.createElement("li")
     novoelemento.textContent = (input.value)
@@ -11,6 +13,7 @@ botao.addEventListener("click", function () {
     btnRemover.textContent = "CONCLUIR TAREFA"
     novoelemento.appendChild(btnRemover)
     btnRemover.style.background = "green"
+    btnRemover.style.color = "white"
     btnRemover.addEventListener("click", function () {
         novoelemento.remove()
     })
