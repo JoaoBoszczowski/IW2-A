@@ -5,7 +5,11 @@ let lista = document.getElementById("lista")
 botao.style.background = "blue"
 botao.style.color = "white"
 botao.addEventListener("click", function () {
+    let texto = input.value
+
+    if (texto === "") return;
     let novoelemento = document.createElement("li")
+    novoelemento.style.margin = "10px"
     novoelemento.textContent = (input.value)
     lista.appendChild(novoelemento)
 
@@ -14,9 +18,8 @@ botao.addEventListener("click", function () {
     novoelemento.appendChild(btnRemover)
     btnRemover.style.background = "green"
     btnRemover.style.color = "white"
+    btnRemover.style.marginLeft = "10px"
     btnRemover.addEventListener("click", function () {
         novoelemento.remove()
     })
 })
-
-
