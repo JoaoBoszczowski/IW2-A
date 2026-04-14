@@ -7,7 +7,9 @@ botao.style.color = "white"
 botao.addEventListener("click", function () {
     let texto = input.value
 
-    if (texto === "") return;
+    if (texto === "") {
+        alert("Voce precisa digitar alguma coisa antes de enviar uma tarefa.")
+        return;}
     let novoelemento = document.createElement("li")
     novoelemento.style.margin = "10px"
     novoelemento.textContent = (input.value)
@@ -22,4 +24,5 @@ botao.addEventListener("click", function () {
     btnRemover.addEventListener("click", function () {
         novoelemento.remove()
     })
+    input.value = ""
 })
