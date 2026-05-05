@@ -13,6 +13,11 @@ const produtos = [
         id:3,
         nome:"mouse",
         preço:100
+    },
+    {
+        id:4,
+        nome:"placa de video",
+        preço:2000
     }
 ]
 
@@ -36,3 +41,35 @@ function mostrarprodutos () {
 }
 
 mostrarprodutos()
+
+function adicionaraocarrinho(id) {
+    const produto = produto.find(
+        prod => prod.id == id
+    )
+    const existe = carrinho.find(
+        prod => prod.id == id
+    )
+    if (existe) {
+        existe.quantidade++
+    }
+    else {
+        carrinho.push({
+          id: produto.id,
+          nome: produto.nome,
+          preço: produto.preço,
+          quantidade: 1
+        })
+    }
+}
+
+function mostrarcarrinho() {
+    const listaCarrinho = document.getElementById("lista-carrinho")
+    const total = document.getElementById("total")
+    listaCarrinho.innerHTML = ""
+
+    carrinho.forEach(produto => {
+
+    })
+}
+
+
