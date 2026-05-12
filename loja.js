@@ -65,11 +65,27 @@ function adicionaraocarrinho(id) {
 function mostrarcarrinho() {
     const listaCarrinho = document.getElementById("lista-carrinho")
     const total = document.getElementById("total")
+    let somatotal = 0
     listaCarrinho.innerHTML = ""
 
     carrinho.forEach(produto => {
+        somatotal += produto.preço * produto.quantidade
 
+        const div = document.createElement("div")
+        div.className = "card.item"
+        div.innerHTML = `
+            <span>${produto.nome}(x${produto.quantidade}) - R$ ${produto.preço * produto.quantidade} </span>
+            <div>
+                <button onclick="mudarQuantidade(${produto.id},1)">+</button>
+                <button onclick="mudarQuantidade(${produto.id},-1)">-</button>
+                <button onclick="removerDoCarrinho(${produto.id})">Limpar</button>
+            </div>
+            
+        `
+        listaCarrinho.appendChild(div)
     })
+
+    total.textContent = "Total: R$ " + somatotal
 }
 
 
