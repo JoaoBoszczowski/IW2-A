@@ -43,7 +43,7 @@ function mostrarprodutos () {
 mostrarprodutos()
 
 function adicionaraocarrinho(id) {
-    const produto = produto.find(
+    const produto = produtos.find(
         prod => prod.id == id
     )
     const existe = carrinho.find(
@@ -60,6 +60,7 @@ function adicionaraocarrinho(id) {
           quantidade: 1
         })
     }
+    mostrarcarrinho()
 }
 
 function mostrarcarrinho() {
@@ -72,7 +73,7 @@ function mostrarcarrinho() {
         somatotal += produto.preço * produto.quantidade
 
         const div = document.createElement("div")
-        div.className = "card.item"
+        div.className = "cart-item"
         div.innerHTML = `
             <span>${produto.nome}(x${produto.quantidade}) - R$ ${produto.preço * produto.quantidade} </span>
             <div>
