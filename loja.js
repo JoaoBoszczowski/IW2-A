@@ -89,4 +89,17 @@ function mostrarcarrinho() {
     total.textContent = "Total: R$ " + somatotal
 }
 
-
+function mudarQuantidade(id, valor) {
+    carrinho = carrinho.map(produto => {
+        if (produto.id == id) {
+            return {
+                id: produto.id,
+                nome: produto.nome,
+                preço: produto.preço,
+                quantidade: produto.quantidade + valor
+            }
+        }
+        return produto
+    }).filter(produto => produto.quantidade > 0)
+    mostrarcarrinho()
+}
