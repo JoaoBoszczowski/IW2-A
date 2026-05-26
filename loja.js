@@ -103,3 +103,44 @@ function mudarQuantidade(id, valor) {
     }).filter(produto => produto.quantidade > 0)
     mostrarcarrinho()
 }
+
+function removerDoCarrinho(id) {
+    carrinho = carrinho.filter(produto => produto.id != id);
+    mostrarcarrinho();
+}
+const btnlimparcarrinho = document.getElementById("limpar")
+const btncomprar = document.getElementById("comprar")
+function limparCarrinho(){
+    
+    if (carrinho.length > 0){
+        carrinho = [];
+        mostrarcarrinho();
+
+    }
+}
+
+btnlimparcarrinho.addEventListener("click", limparCarrinho);
+
+function comprar() {
+    const textoComprar =
+     document.getElementById("texto-comprar");
+
+     if (carrinho.length >= 1) {
+        carrinho = [];
+        mostrarcarrinho();
+
+        textoComprar.textContent = "Compra realizada!";
+        textoComprar.style.color = "green";
+        textoComprar.style.fontWeight = "bold";
+
+     }
+     else {
+        textoComprar.textContent = "Sem itens para comprar";
+        textoComprar.style.color = "red";
+        textoComprar.style.fontWeight = "bold";
+
+
+     }
+}
+
+btncomprar.addEventListener("click", comprar);
